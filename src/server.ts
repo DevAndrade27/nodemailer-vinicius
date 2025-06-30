@@ -52,8 +52,9 @@ app.post("/send-email", async(request, response) => {
 
 app.listen({
     host: "0.0.0.0",
-    port: process.env.PORT ? Number(process.env) : 5000
+    port: Number(process.env.PORT || 10000)
+
 }).then(() => {
-    console.log("servidor funcionando")
+    console.log("servidor funcionando");
 })
 
